@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Task Manager with Theme Switch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn">Switch Theme</button>
+
+        <!-- Task Input Section -->
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter task">
+            <input type="date" id="taskDeadline">
+            <select id="taskPriority">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <label>Filter by Priority:</label>
+            <select id="filterPriority">
+                <option value="all">All</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

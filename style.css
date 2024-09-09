@@ -1,0 +1,132 @@
+/* Root variables for light and dark themes */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --container-bg: #f5f5f5;
+    --button-bg: #007bff;
+    --button-text: #ffffff;
+    --low-priority: green;
+    --medium-priority: orange;
+    --high-priority: red;
+}
+
+/* Dark theme variables */
+.dark-theme {
+    --background-color: #1c1c1c;
+    --text-color: #ffffff;
+    --container-bg: #2e2e2e;
+    --button-bg: #505bff;
+    --low-priority: lightgreen;
+    --medium-priority: lightorange;
+    --high-priority: lightcoral;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--container-bg);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.task-input, .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.task-input input, .task-input select, .task-input button, .filters select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.task-input button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+}
+
+.task-input button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+li.low {
+    border-left: 4px solid var(--low-priority);
+}
+
+li.medium {
+    border-left: 4px solid var(--medium-priority);
+}
+
+li.high {
+    border-left: 4px solid var(--high-priority);
+}
+
+li span {
+    flex-grow: 1;
+}
+
+button.delete-btn {
+    background-color: red;
+    color: var(--button-text);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.delete-btn:hover {
+    background-color: darkred;
+}
+
+button.complete-btn {
+    background-color: green;
+    color: var(--button-text);
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+button.complete-btn:hover {
+    background-color: darkgreen;
+}
+
+#themeToggleBtn {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+}
+
+#themeToggleBtn:hover {
+    background-color: #0056b3;
+}
